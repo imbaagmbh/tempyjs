@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>tempy.js Test</title>
+</head>
+<body>
+
+<button onClick="loadSeperate();">loadSeperate</button>
+<button onClick="loadTogether();">loadTogether</button>
+<button onClick="loadPack();">loadPack</button>
+<button onClick="tempy.flush();">Flush</button>
+<button onClick="$('#content').empty();">Empty</button>
+
+<div id="content">
+
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="src/jquery.tempy.js"></script>
+
+<script>
+
+
+    function loadSeperate(){
+
+        $('#content').empty();
+
+        var template1 = tempy.get({name:"template1"});
+        var template2 = tempy.get({name:"template2"});
+        var template3 = tempy.get({name:"template3"});
+        var template4 = tempy.get({name:"template4"});
+
+        $('#content').append(template1);
+        $('#content').append(template2);
+        $('#content').append(template3);
+        $('#content').append(template4);
+    }
+
+    function loadTogether(){
+
+        $('#content').empty();
+        var templates = tempy.get({name:"template2"},{name:"template3"},{name:"template1"},{name:"template4"});
+
+
+        $('#content').append(templates['template1']);
+        $('#content').append(templates['template2']);
+        $('#content').append(templates['template3']);
+        $('#content').append(templates['template4']);
+    }
+
+    function loadPack(){
+
+
+        $('#content').empty();
+        var template = tempy.get({name:"mainView"});
+        var template1 = tempy.get({name:"template1"});
+        var template2 = tempy.get({name:"template2"});
+        var template3 = tempy.get({name:"template3"});
+        var template4 = tempy.get({name:"template4"});
+
+        $('#content').append(template1);
+        $('#content').append(template2);
+        $('#content').append(template3);
+        $('#content').append(template4);
+    }
+
+
+</script>
+
+</body>
+</html>
