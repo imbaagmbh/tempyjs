@@ -1,4 +1,4 @@
-#H2 Tempy.js: Client-Side-Templating mit HTML5 Local Storage
+# Tempy.js: Client-Side-Templating mit HTML5 Local Storage
 
 
 Bei der Entwicklung von WebApps suchen Webworker immer wieder nach einer Stellschraube,
@@ -9,14 +9,14 @@ Templates eine Herausforderung.
 Das Ziel ist ein modulares Template System, das verschiedene App-Bestandteile
 asynchron neu rendern kann, zu realisieren. Hierfür bieten sich verschiedene Optionen an.
 
-#H3 Option 1: Komplette HTML-Blöcke vom Server vorverarbeitet an den Client schicken.
+## Option 1: Komplette HTML-Blöcke vom Server vorverarbeitet an den Client schicken.
 
 Dies ist sicherlich am einfachsten zu realisieren, da Clientseitig nur wenig Prozesslogik erfordert
 wird und die Template Engine auf der Server Seite alles unkompliziert erledigen kann.
 Jedoch kann man bei diesem Ansatz kaum Vorteile vom Caching der Templates ziehen, sodass der
 Client durch unnötig viele Daten und der Server durch unnötige Template-Verarbeitung zusätzlich belastet wird.
 
-#H3 Option 2: Clientseitige Templates über Script-Tag
+## Option 2: Clientseitige Templates über Script-Tag
 
 Bei clientseitigem Templating ist es gängige Praxis, die jeweiligen Templates innerhalb eines Script-Tag
 mit dem Hauptdokument zusammen auszuliefern. So erspart man sich zusätzliche Aufrufe separater Templates
@@ -24,7 +24,7 @@ und kann sehr schnell clientseitig auf die jeweiligen Templates zugreifen.
 Für ein komplexes System wird diese Lösung auf Dauer bei zunehmender Anzahl von Templates jedoch schnell
 unübersichtlich und irgendwann auch nicht mehr performant.
 
-#H3 Option 3: Clientseitige Templates über AJAX nachladen.
+## Option 3: Clientseitige Templates über AJAX nachladen.
 
 Die Übertragung von Templates über AJAX zur Weiterverarbeitung in Template Systemen wie Moustache oder
 Handlebars schien hier die beste Lösung zu sein. Die Templates können so kleinteilig wie nötig aufgesplittert
@@ -36,7 +36,7 @@ Besonders auf mobilen Geräten soll so ein zusätzlicher Performance Schub ermö
 
 Diese Idee haben wir nun in der Bibliothek tempy.js in abgewandelter Form umgesetzt.
 
-#H2 Das Konzept von Tempy.js
+## Das Konzept von Tempy.js
 
 Tempy.js bietet im Zusammenspiel mit einer Server-Applikation eine schnelle Lösung
 für das Abrufen und Speichern von clientseitigen Templates. Die Bibliothek ruft
@@ -47,7 +47,7 @@ sodass auch Offline-Applikationen denkbar sind.
 Ein weiterer Vorteil in der Aufteilung, ist die Möglichkeit Templates auf dem Server vorzuverarbeiten
 (zum Beispiel übersetzen) und zusammengehörige Templates bei einem Aufruf zu übertragen. Dazu aber später mehr.
 
-#H2 Tempy.js benutzen
+## Tempy.js benutzen
 
 Tempy.js benötigt derzeit jQuery um die nötigen Requests an den Server zu stellen. Nachdem jQuery und Tempy.js in die WebApp
 eingebunden sind, können mittels einer einfacher API Template Dateien abgerufen werden.
@@ -90,7 +90,7 @@ Hierfür müssen lediglich die Abhängigkeiten in einer separaten Datei (pack.in
 
 Fordert man nun also  das Template „mainView“ an, werden die dazugehörigen Templates template1, template2, template3 und template4 mit übertragen.
 
-Tempy.js API und Konfiguration
+## Tempy.js API und Konfiguration
 
 Tempy.js lässt sich über eine Reihe von Befehlen steuern.
 
@@ -106,4 +106,4 @@ var defaultExpiration = 10;
 var templateServer = "templateServer.php";
 ```
 
-Für die Zukunft planen wir weitere Funktionen wie die Integration von JavaScript Template Engines und eine Require.js Implementation von Tempy.js. Solange steht die aktuelle Fassung von Tempy.js zum Download auf GitHub zur Verfügung.
+Für die Zukunft planen wir weitere Funktionen wie die Integration von JavaScript Template Engines und eine Require.js Implementation von Tempy.js.
