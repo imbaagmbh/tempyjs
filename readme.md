@@ -95,8 +95,8 @@ Fordert man nun also  das Template „mainView“ an, werden die dazugehörigen 
 Tempy.js lässt sich über eine Reihe von Befehlen steuern.
 
 1. tempy.get() ruft Templates ab
-2.tempy.clear() überprüft ob veraltete Templates im LocalStorage hinterlegt sind
-3.tempy.flush() löscht sämtliche Templates aus dem LocalStorage des Clients
+2. tempy.clear() überprüft ob veraltete Templates im LocalStorage hinterlegt sind
+3. tempy.flush() löscht sämtliche Templates aus dem LocalStorage des Clients
 
 Standardmäßig behält Tempy.js Templates für 10 Stunden im Cache und fragt Templates von der templateServer.php ab. Diese Werte können wie auch das Storage-Prefix, der zur Unterscheidung der Tempy.js Daten von anderen Daten im LocalStorage ermöglicht, nach Belieben in der Bibliothek selbst angepasst werden, um es den eigenen Anforderungen anzupassen.
 
