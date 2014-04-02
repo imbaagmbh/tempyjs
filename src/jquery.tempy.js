@@ -1,7 +1,6 @@
 /*!
  * tempy.js
  * v0.1.0 - 2014-03-31
- * http://addyosmani.github.com/basket.js
  */
 
 (function( window, document ) {

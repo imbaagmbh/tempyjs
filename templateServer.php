@@ -13,7 +13,4 @@ foreach($_POST['arguments'] as $template){
 $tempy -> getTemplates();
 
 
-
-
-
 ?>
