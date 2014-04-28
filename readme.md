@@ -3,7 +3,7 @@
 
 Bei der Entwicklung von WebApps suchen Webworker immer wieder nach einer Stellschraube,
 die zu einer besseren Performance beitragen könnten. Bei einer WebApp, die wir derzeit
-in unserer [Werbeagentur imbaa](https://www.imbaa.de) entwicklen, boten vor allem Cleintseitige
+in unserer [Werbeagentur imbaa](http://www.imbaa.de) entwicklen, boten vor allem Cleintseitige
 Templates eine Herausforderung.
 
 Das Ziel ist ein modulares Template System, das verschiedene App-Bestandteile
@@ -107,3 +107,7 @@ var templateServer = "templateServer.php";
 ```
 
 Für die Zukunft planen wir weitere Funktionen wie die Integration von JavaScript Template Engines und eine Require.js Implementation von Tempy.js.
+
+## Lizenz
+
+Tempy.js ist unter der [MIT License](http://en.wikipedia.org/wiki/MIT_License) verfügbar.
